@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="bg1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greetings!</title>
+    <style>
+      * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        margin: 0;
+      }
+      h1,
+      h2 {
+        color: white;
+        text-shadow: 2px 2px 0px black;
+      }
+      html {
+        text-align: center;
+        background-color: #13212e;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      header {
+        background-color: #f2f7a1;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+      }
+      p {
+        text-shadow: 2px 2px 0px black;
+      }
+
+      /* text change animation */
+      .container {
+        color: #e5e5e5;
+        font-size: 2.26rem;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .animation {
+        height: 62px;
+        overflow: hidden;
+        margin-left: 3px;
+      }
+
+      .animation > div > div {
+        padding: 0.25rem 0.75rem;
+        height: 2.81rem;
+        margin-bottom: 2.81rem;
+        display: inline-block;
+      }
+
+      .animation div:first-child {
+        animation: text-animation 8s infinite;
+      }
+
+      @keyframes text-animation {
+        0% {
+          margin-top: 0;
+        }
+        10% {
+          margin-top: 0;
+        }
+        20% {
+          margin-top: -5.62rem;
+        }
+        30% {
+          margin-top: -5.62rem;
+        }
+        40% {
+          margin-top: -11.24rem;
+        }
+        60% {
+          margin-top: -11.24rem;
+        }
+        70% {
+          margin-top: -5.62rem;
+        }
+        80% {
+          margin-top: -5.62rem;
+        }
+        90% {
+          margin-top: 0;
+        }
+        100% {
+          margin-top: 0;
+        }
+      }
+
+      /* button */
+      button {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color: #e8e8e8;
+        --button_outline_color: #000000;
+        font-size: 17px;
+        font-weight: bold;
+        border: none;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+      }
+
+      .button_top {
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 0.75em 1.5em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+      }
+
+      button:hover .button_top {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+      }
+
+      button:active .button_top {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+      }
+
+      /* background changer */
+      .bg1 {
+        background-image: url(https://nwbible.org/wp-content/uploads/2022/09/20211223-Christmas-Eve-0019-web.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: exclusion;
+      }
+      .bg2 {
+        background-image: url(https://wallpapercave.com/dwp1x/wp3815997.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: exclusion;
+      }
+      .bg3 {
+        background-image: url(https://wallpapercave.com/wp/wp3815987.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: exclusion;
+      }
+
+      /* title animation */
+      .greetings {
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 900;
+      }
+      .greetings > span {
+        animation: glow 2.5s ease-in-out infinite;
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          color: #fff;
+          text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+        }
+        10%,
+        90% {
+          color: #111;
+          text-shadow: none;
+        }
+      }
+      .greetings > span:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .greetings > span:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .greetings > span:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+      .greetings > span:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+      .greetings > span:nth-child(6) {
+        animation-delay: 0.2s;
+      }
+      .greetings > span:nth-child(8) {
+        animation-delay: 0.2s;
+      }
+      .greetings > span:nth-child(9) {
+        animation-delay: 0.4s;
+      }
+      .greetings > span:nth-child(10) {
+        animation-delay: 0.6s;
+      }
+      .greetings > span:nth-child(11) {
+        animation-delay: 0.8s;
+      }
+      .greetings > span:nth-child(12) {
+        animation-delay: 0.1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="greetings">
+      <span>HAPPY</span>
+      <span>CHRISTMAS</span>
+      <span>EVE</span>
+    </div>
+
+    <h1>Hello, <span id="nameInput"></span>!</h1>
+
+    <h2>'Tis the night to rejoice</h2>
+
+    <main class="container">
+      <p>May blessings of the Lord bring cheer and prosperity to</p>
+      <section class="animation">
+        <div class="first"><div>your family.</div></div>
+        <div class="second"><div>your friends.</div></div>
+        <div class="third"><div>your loved ones.</div></div>
+      </section>
+    </main>
+
+    <button class="contrast__link"><span class="button_top">Change Background</span></button>
+
+    <script src="script.js"></script>
+    <script src="scriptindex.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Eve</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .subTitle {
+        color: white;
+        font-family: "Reem Kufi", sans-serif;
+      }
+      .mainTitle {
+        color: white;
+        font-family: "Pacifico", cursive;
+      }
+      body {
+        background-color: #000;
+        width: auto;
+        height: 100vh;
+      }
+      .christmas-tree {
+        margin-top: -200px;
+        overflow: hidden;
+        animation-name: pohon;
+        animation-duration: 4s;
+      }
+      @keyframes pohon {
+        0% {
+          opacity: 0%;
+          margin-top: 100px;
+        }
+        100% {
+          opacity: 100%;
+          margin-top: -200px;
+        }
+      }
+      button {
+        background-color: white;
+        padding: 8px 16px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: black;
+        transition-duration: 0.5s;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+        transition-duration: 0.5s;
+        border-color: white;
+        border-style: solid;
+      }
+      a {
+        background-color: white;
+        padding: 8px 16px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: black;
+        transition-duration: 0.5s;
+      }
+      a:hover {
+        background-color: black;
+        color: white;
+        transition-duration: 0.5s;
+        border-color: white;
+        border-style: solid;
+
+      }
+
+      /* form */
+      .input-group {
+        position: relative;
+      }
+
+      .input {
+        border: solid 1.5px #9e9e9e;
+        border-radius: 1rem;
+        background: none;
+        padding: 1rem;
+        font-size: 1rem;
+        color: #f5f5f5;
+        transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .user-label {
+        margin-left: -12.5em;
+        color: #e8e8e8;
+        pointer-events: none;
+        transform: translateY(1rem);
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        position: absolute;
+      }
+
+      .input:focus,
+      input:valid {
+        outline: none;
+        border: 1.5px solid #1a73e8;
+      }
+
+      .input:focus ~ label,
+      input:valid ~ label {
+        transform: translateY(-50%) scale(0.8);
+        background-color: #212121;
+        padding: 0 0.2em;
+        color: #2196f3;
+      }
+      .userInteraction {
+        animation-name: pohon;
+        animation-duration: 4s;
+        margin-top: -200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="christmas-tree">
+      <canvas></canvas>
+    </div>
+
+    <center>
+      <h1 class="mainTitle">Hello!</h1>
+      <a href="christmaseve.html">Click Me!</a>
+    </center>
+    <script src="script.js"></script>
+  </body>
+</html>
