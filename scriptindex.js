@@ -1,6 +1,8 @@
+// prompt
 let inputNama = prompt("Enter your name here:");
 document.getElementById("nameInput").innerHTML = inputNama;
 
+// background changer
 const background = document.querySelector("html");
 const button = document.querySelector(".contrast__link");
 button.addEventListener("click", (e) => {
@@ -15,7 +17,4 @@ button.addEventListener("click", (e) => {
     background.classList.remove("bg3");
     background.classList.add("bg1");
   }
-  //   else {
-  //     background.classList.add('bg1');
-  //   }
 });
