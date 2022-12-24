@@ -18,8 +18,7 @@
       }
       h1,
       h2 {
-        color: white;
-        text-shadow: 4px 2px 0px black;
+        text-shadow: 2px 2px 0px black;
         font-size: 2.26rem;
         margin-bottom: 4px;
       }
@@ -38,6 +37,7 @@
       p {
         text-shadow: 2px 2px 0px black;
         font-family: "Raleway", sans-serif;
+        color: gold;
       }
 
       /* text change animation */
@@ -51,7 +51,8 @@
         font-weight: bold;
       }
       .shadow {
-        text-shadow: 2px 2px 0px blue;
+        text-shadow: 2px 2px 0px black;
+        color: gold;
       }
       .animation {
         height: 62px;
@@ -62,8 +63,8 @@
 
       .animation > div > div {
         padding: 0.25rem 0.75rem;
-        height: 42.5px;
-        margin-bottom: 42.5px;
+        height: 38px;
+        margin-bottom: 47px;
         display: inline-block;
       }
 
@@ -164,8 +165,8 @@
         text-align: left;
         font-size: 5rem;
         font-weight: 900;
-        margin-left: 20px;
-        margin-top: 20px;
+        margin-left: 100px;
+        margin-top: 90px;
       }
       .greetings > span {
         animation: glow 2.5s ease-in-out infinite;
@@ -200,9 +201,17 @@
       }
       .mainText {
         text-align: left;
-        margin-left: 20px;
-        margin-top: 40px;
+        margin-left: 100px;
+        margin-top: 10px;
+        color: gold;
       }
+      .text-align {
+        display: flex;
+      }
+      .button-edit-pos {
+        margin-left: 100px;
+      }
+
     </style>
   </head>
   <body>
@@ -219,18 +228,22 @@
 
       <h2>'Tis the night to rejoice</h2>
 
-      <main class="container">
-        <p>May blessings of the Lord bring cheer and prosperity to</p>
-        <section class="animation shadow">
-          <div class="first"><div>your family.</div></div>
-          <div class="second"><div>your friends.</div></div>
-          <div class="third"><div>your loved ones.</div></div>
-        </section>
-      </main>
+      <div class="text-align">
+        <main class="container">
+          <p>May blessings of the Lord bring cheer and prosperity to</p>
+          <section class="animation shadow">
+            <div class="first"><div>your family.</div></div>
+            <div class="second"><div>your friends.</div></div>
+            <div class="third"><div>your loved ones.</div></div>
+          </section>
+        </main>
+        <div class="button-edit-pos">
+          <button class="contrast__link"><span class="button_top">Change Background</span></button>
+        </div>
+      </div>
     </div>
-
-    <button class="contrast__link"><span class="button_top">Change Background</span></button>
-
+    
+    
     <script src="script.js"></script>
     <script src="scriptindex.js"></script>
   </body>
