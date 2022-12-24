@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Greetings!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&family=Satisfy&display=swap" rel="stylesheet" />
     <style>
       * {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         margin: 0;
+        font-family: "Raleway", sans-serif;
       }
       h1,
       h2 {
         color: white;
         text-shadow: 4px 2px 0px black;
+        font-size: 2.26rem;
+        margin-bottom: 4px;
       }
       html {
         text-align: center;
@@ -32,21 +37,21 @@
       }
       p {
         text-shadow: 2px 2px 0px black;
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
       }
 
       /* text change animation */
       .container {
         color: #e5e5e5;
         font-size: 2.26rem;
-        height: 50vh;
+        height: 10vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: left;
+        justify-content: left;
         font-weight: bold;
       }
       .shadow {
-        text-shadow: 2px 2px 0px red;
+        text-shadow: 2px 2px 0px blue;
       }
       .animation {
         height: 62px;
@@ -57,8 +62,8 @@
 
       .animation > div > div {
         padding: 0.25rem 0.75rem;
-        height: 2.75rem;
-        margin-bottom: 2.74rem;
+        height: 42.5px;
+        margin-bottom: 42.5px;
         display: inline-block;
       }
 
@@ -156,9 +161,11 @@
 
       /* title animation */
       .greetings {
-        text-align: center;
+        text-align: left;
         font-size: 5rem;
         font-weight: 900;
+        margin-left: 20px;
+        margin-top: 20px;
       }
       .greetings > span {
         animation: glow 2.5s ease-in-out infinite;
@@ -171,7 +178,7 @@
         }
         10%,
         90% {
-          color: #111;
+          color: gray;
           text-shadow: none;
         }
       }
@@ -184,29 +191,43 @@
       .greetings > span:nth-child(4) {
         animation-delay: 0.6s;
       }
-  
-  
+
+      /* type edit */
+      .cursive-font {
+        font-family: "Meddon", cursive;
+        font-size: 200px;
+        margin-left: 20px;
+      }
+      .mainText {
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 40px;
+      }
     </style>
   </head>
   <body>
     <div class="greetings">
       <span>HAPPY</span>
+      <br />
       <span>CHRISTMAS</span>
-      <span>EVE</span>
+      <br />
+      <span class="cursive-font">Eve</span>
     </div>
 
-    <h1>Hello, <span id="nameInput"></span>!</h1>
+    <div class="mainText">
+      <h1>Hello, <span id="nameInput"></span>!</h1>
 
-    <h2>'Tis the night to rejoice</h2>
+      <h2>'Tis the night to rejoice</h2>
 
-    <main class="container">
-      <p>May blessings of the Lord bring cheer and prosperity to</p>
-      <section class="animation shadow">
-        <div class="first"><div>your family.</div></div>
-        <div class="second"><div>your friends.</div></div>
-        <div class="third"><div>your loved ones.</div></div>
-      </section>
-    </main>
+      <main class="container">
+        <p>May blessings of the Lord bring cheer and prosperity to</p>
+        <section class="animation shadow">
+          <div class="first"><div>your family.</div></div>
+          <div class="second"><div>your friends.</div></div>
+          <div class="third"><div>your loved ones.</div></div>
+        </section>
+      </main>
+    </div>
 
     <button class="contrast__link"><span class="button_top">Change Background</span></button>
 

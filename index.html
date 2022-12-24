@@ -9,11 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Lobster&display=swap" rel="stylesheet" />
     <style>
       * {
         margin: 0;
         padding: 0;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      body {
+        background-color: #000;
+        width: auto;
+        height: 100vh;
       }
       .subTitle {
         color: white;
@@ -21,16 +27,22 @@
       }
       .mainTitle {
         color: white;
-        font-family: "Pacifico", cursive;
-      }
-      body {
-        background-color: #000;
-        width: auto;
-        height: 100vh;
+        font-family: "Allura", cursive;
+        font-size: 300px;
+        z-index: 100;
+        margin-left: 500px;
+        font-weight: bold;
+        text-align: right;
       }
       .christmas-tree {
-        margin-top: -200px;
+        margin-left:-800px ;
+        margin-top: -100px;
         overflow: hidden;
+        animation-name: pohon;
+        animation-duration: 4s;
+        width:100%;
+      }
+      .pohon {
         animation-name: pohon;
         animation-duration: 4s;
       }
@@ -41,7 +53,7 @@
         }
         100% {
           opacity: 100%;
-          margin-top: -200px;
+
         }
       }
       button {
@@ -75,7 +87,6 @@
         transition-duration: 0.5s;
         border-color: white;
         border-style: solid;
-
       }
 
       /* form */
@@ -118,20 +129,24 @@
       .userInteraction {
         animation-name: pohon;
         animation-duration: 4s;
-        margin-top: -200px;
+        margin-top: 0;
         text-align: center;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
       }
     </style>
   </head>
   <body>
-    <div class="christmas-tree">
-      <canvas></canvas>
+    <div class="userInteraction">
+      <div class="mainTitle">Hello</div>
+      <div class="christmas-tree">
+        <canvas></canvas>
+      </div>
     </div>
-
     <center>
-      <h1 class="mainTitle">Hello!</h1>
-      <br><br>
-      <a href="christmaseve.html">Click Me!</a>
+      <a class="pohon" href="christmaseve.html">Click Me!</a>
     </center>
     <script src="script.js"></script>
   </body>
